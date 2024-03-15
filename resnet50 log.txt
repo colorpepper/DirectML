@@ -1,0 +1,385 @@
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\resnet50>pip install -r requirements.txt
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Collecting pandas (from -r requirements.txt (line 1))
+  Downloading https://mirrors.aliyun.com/pypi/packages/93/26/2a695303a4a3194014dca7cb5d5ce08f0d2c6baa344fb5f562c642e77b2b/pandas-2.2.1-cp310-cp310-win_amd64.whl (11.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 28.5 MB/s eta 0:00:00
+Requirement already satisfied: tensorboard in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from -r requirements.txt (line 2)) (2.10.1)
+Collecting matplotlib (from -r requirements.txt (line 3))
+  Downloading https://mirrors.aliyun.com/pypi/packages/e4/43/fd3cd5989d6b592af1c2e4f37bf887f74b790f10b568b2497fe874a67fc7/matplotlib-3.8.3-cp310-cp310-win_amd64.whl (7.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 25.7 MB/s eta 0:00:00
+Collecting tqdm (from -r requirements.txt (line 4))
+  Downloading https://mirrors.aliyun.com/pypi/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB ? eta 0:00:00
+Requirement already satisfied: pyyaml in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from -r requirements.txt (line 5)) (6.0.1)
+Requirement already satisfied: opencv-python in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from -r requirements.txt (line 6)) (4.9.0.80)
+Requirement already satisfied: wget in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from -r requirements.txt (line 7)) (3.2)
+Collecting numpy<2,>=1.22.4 (from pandas->-r requirements.txt (line 1))
+  Downloading https://mirrors.aliyun.com/pypi/packages/19/77/538f202862b9183f54108557bfda67e17603fc560c384559e769321c9d92/numpy-1.26.4-cp310-cp310-win_amd64.whl (15.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.8/15.8 MB 26.2 MB/s eta 0:00:00
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from pandas->-r requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from pandas->-r requirements.txt (line 1)) (2023.3.post1)
+Collecting tzdata>=2022.7 (from pandas->-r requirements.txt (line 1))
+  Downloading https://mirrors.aliyun.com/pypi/packages/65/58/f9c9e6be752e9fcb8b6a0ee9fb87e6e7a1f6bcab2cdc73f02bb7ba91ada0/tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB ? eta 0:00:00
+Requirement already satisfied: absl-py>=0.4 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (2.0.0)
+Requirement already satisfied: grpcio>=1.24.3 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (1.60.0)
+Requirement already satisfied: google-auth<3,>=1.6.3 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (2.26.2)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (0.4.6)
+Requirement already satisfied: markdown>=2.6.8 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (3.5.2)
+Requirement already satisfied: protobuf<3.20,>=3.9.2 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (3.19.6)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (2.31.0)
+Requirement already satisfied: setuptools>=41.0.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (68.2.2)
+Requirement already satisfied: tensorboard-data-server<0.7.0,>=0.6.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (0.6.1)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (1.8.1)
+Requirement already satisfied: werkzeug>=1.0.1 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (3.0.1)
+Requirement already satisfied: wheel>=0.26 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tensorboard->-r requirements.txt (line 2)) (0.41.2)
+Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 3))
+  Downloading https://mirrors.aliyun.com/pypi/packages/fd/7c/168f8343f33d861305e18c56901ef1bb675d3c7f977f435ec72751a71a54/contourpy-1.2.0-cp310-cp310-win_amd64.whl (186 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.7/186.7 kB ? eta 0:00:00
+Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 3))
+  Downloading https://mirrors.aliyun.com/pypi/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 3))
+  Downloading https://mirrors.aliyun.com/pypi/packages/98/aa/482ce7af3fd572121a673d9af4b73901cb0ee29b676aaf576fd67856e9fe/fonttools-4.49.0-cp310-cp310-win_amd64.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 35.0 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 3))
+  Downloading https://mirrors.aliyun.com/pypi/packages/4a/a1/8a9c9be45c642fa12954855d8b3a02d9fd8551165a558835a19508fec2e6/kiwisolver-1.4.5-cp310-cp310-win_amd64.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.1/56.1 kB ? eta 0:00:00
+Requirement already satisfied: packaging>=20.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from matplotlib->-r requirements.txt (line 3)) (23.1)
+Requirement already satisfied: pillow>=8 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from matplotlib->-r requirements.txt (line 3)) (10.2.0)
+Collecting pyparsing>=2.3.1 (from matplotlib->-r requirements.txt (line 3))
+  Downloading https://mirrors.aliyun.com/pypi/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl (103 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.2/103.2 kB ? eta 0:00:00
+Requirement already satisfied: colorama in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from tqdm->-r requirements.txt (line 4)) (0.4.6)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 2)) (5.3.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 2)) (0.3.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 2)) (4.9)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard->-r requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: six>=1.5 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 1)) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from requests<3,>=2.21.0->tensorboard->-r requirements.txt (line 2)) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from requests<3,>=2.21.0->tensorboard->-r requirements.txt (line 2)) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from requests<3,>=2.21.0->tensorboard->-r requirements.txt (line 2)) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from requests<3,>=2.21.0->tensorboard->-r requirements.txt (line 2)) (2024.2.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from werkzeug>=1.0.1->tensorboard->-r requirements.txt (line 2)) (2.1.3)
+Requirement already satisfied: pyasn1<0.6.0,>=0.4.6 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 2)) (0.5.1)
+Requirement already satisfied: oauthlib>=3.0.0 in c:\users\yu_zh\anaconda3\envs\tf2\lib\site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard->-r requirements.txt (line 2)) (3.2.2)
+Installing collected packages: tzdata, tqdm, pyparsing, numpy, kiwisolver, fonttools, cycler, pandas, contourpy, matplotlib
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.22.0
+    Uninstalling numpy-1.22.0:
+      Successfully uninstalled numpy-1.22.0
+Successfully installed contourpy-1.2.0 cycler-0.12.1 fonttools-4.49.0 kiwisolver-1.4.5 matplotlib-3.8.3 numpy-1.26.4 pandas-2.2.1 pyparsing-3.1.2 tqdm-4.66.2 tzdata-2024.1
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\resnet50>cd ../../
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML\PyTorch>cd ..
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>python pytorch\1.13\data\dataset.py
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python\cifar-10-python.tar.gz
+100%|███████████████████████████████████████████████████████████████| 170498071/170498071 [00:22<00:00, 7691839.67it/s]
+Extracting F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python\cifar-10-python.tar.gz to F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python
+Downloading PennFundaPed dataset
+
+100% [........................................................................] 53723336 / 53723336
+Extracted PennFundaPed dataset
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>python pytorch\1.13\resnet50\train.py
+Loading the training dataset from: F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python
+        Train data X [N, C, H, W]:
+                shape=torch.Size([32, 3, 224, 224]),
+                dtype=torch.float32
+        Train data Y:
+                shape=torch.Size([32]),
+                dtype=torch.int64
+Loading the testing dataset from: F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python
+        Test data X [N, C, H, W]:
+                shape=torch.Size([32, 3, 224, 224]),
+                dtype=torch.float32
+        Test data Y:
+                shape=torch.Size([32]),
+                dtype=torch.int64
+Finished moving resnet50 to device: privateuseone:0 in 0.0s.
+Epoch 1
+-------------------------------
+loss: 2.383356  [ 3200/50000] in 31.135276s
+loss: 2.402216  [ 6400/50000] in 25.366438s
+loss: 2.115225  [ 9600/50000] in 25.252648s
+loss: 2.008183  [12800/50000] in 25.353404s
+loss: 1.884667  [16000/50000] in 25.366736s
+loss: 2.252415  [19200/50000] in 25.413742s
+loss: 2.046664  [22400/50000] in 25.559057s
+loss: 2.294980  [25600/50000] in 25.382926s
+loss: 1.764979  [28800/50000] in 25.454651s
+loss: 1.902600  [32000/50000] in 25.434692s
+loss: 2.030525  [35200/50000] in 25.439946s
+loss: 1.822618  [38400/50000] in 25.468431s
+loss: 1.877056  [41600/50000] in 25.473824s
+loss: 1.765479  [44800/50000] in 25.546411s
+loss: 1.918717  [48000/50000] in 25.531150s
+current highest_accuracy:  0.3481000065803528
+Test Error:
+ Accuracy: 34.8%, Avg loss: 1.775002
+
+Epoch 2
+-------------------------------
+loss: 2.059645  [ 3200/50000] in 17.121646s
+loss: 1.861203  [ 6400/50000] in 17.032254s
+loss: 1.906665  [ 9600/50000] in 17.111885s
+loss: 1.785268  [12800/50000] in 17.081348s
+loss: 1.696838  [16000/50000] in 17.115842s
+loss: 1.776810  [19200/50000] in 17.095987s
+loss: 1.792970  [22400/50000] in 17.114203s
+loss: 1.567709  [25600/50000] in 17.125858s
+loss: 1.939062  [28800/50000] in 17.122903s
+loss: 1.624463  [32000/50000] in 17.135321s
+loss: 1.813655  [35200/50000] in 17.134008s
+loss: 1.732333  [38400/50000] in 17.155099s
+loss: 1.795053  [41600/50000] in 17.132943s
+loss: 2.098015  [44800/50000] in 17.142710s
+loss: 1.751123  [48000/50000] in 17.140996s
+current highest_accuracy:  0.43540000915527344
+Test Error:
+ Accuracy: 43.5%, Avg loss: 1.546885
+
+Epoch 3
+-------------------------------
+loss: 1.565119  [ 3200/50000] in 16.987386s
+loss: 1.371115  [ 6400/50000] in 17.073498s
+loss: 1.904156  [ 9600/50000] in 17.130959s
+loss: 1.917781  [12800/50000] in 17.095160s
+loss: 1.601933  [16000/50000] in 17.119828s
+loss: 1.536430  [19200/50000] in 17.164347s
+loss: 1.994728  [22400/50000] in 17.145504s
+loss: 1.608295  [25600/50000] in 17.167464s
+loss: 1.958407  [28800/50000] in 17.149776s
+loss: 1.843969  [32000/50000] in 17.145760s
+loss: 1.851208  [35200/50000] in 17.145354s
+loss: 1.247250  [38400/50000] in 17.147901s
+loss: 1.569689  [41600/50000] in 17.312655s
+loss: 1.603120  [44800/50000] in 17.262543s
+loss: 1.342189  [48000/50000] in 17.229027s
+Test Error:
+ Accuracy: 43.2%, Avg loss: 1.559238
+
+Epoch 4
+-------------------------------
+loss: 1.414018  [ 3200/50000] in 17.093273s
+loss: 1.786661  [ 6400/50000] in 17.151312s
+loss: 1.467507  [ 9600/50000] in 17.179270s
+loss: 1.834842  [12800/50000] in 17.215167s
+loss: 1.542249  [16000/50000] in 17.209758s
+loss: 1.480952  [19200/50000] in 17.221127s
+loss: 1.558845  [22400/50000] in 17.235658s
+loss: 1.479575  [25600/50000] in 17.230059s
+loss: 1.441695  [28800/50000] in 17.238941s
+loss: 1.509011  [32000/50000] in 17.230674s
+loss: 1.495160  [35200/50000] in 17.236895s
+loss: 1.586825  [38400/50000] in 17.236362s
+loss: 1.679024  [41600/50000] in 17.238194s
+loss: 1.433585  [44800/50000] in 17.246282s
+loss: 1.314461  [48000/50000] in 17.243205s
+current highest_accuracy:  0.4832000136375427
+Test Error:
+ Accuracy: 48.3%, Avg loss: 1.443786
+
+Epoch 5
+-------------------------------
+loss: 1.785867  [ 3200/50000] in 17.099928s
+loss: 1.510376  [ 6400/50000] in 17.154046s
+Traceback (most recent call last):
+  File "F:\用户目录\我的文档\GitHub\DirectML\pytorch\1.13\resnet50\train.py", line 39, in <module>
+    main()
+  File "F:\用户目录\我的文档\GitHub\DirectML\pytorch\1.13\resnet50\train.py", line 34, in main
+    train(args.path, args.batch_size, args.epochs, args.learning_rate,
+  File "F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\classification\train_classification.py", line 131, in main
+    train(training_dataloader,
+  File "F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\classification\train_classification.py", line 84, in train
+    batch_loss = loss(model(X), y)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torchvision\models\resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torchvision\models\resnet.py", line 276, in _forward_impl
+    x = self.layer4(x)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torchvision\models\resnet.py", line 151, in forward
+    out = self.bn2(out)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\modules\batchnorm.py", line 171, in forward
+    return F.batch_norm(
+  File "C:\Users\yu_zh\anaconda3\envs\TF2\lib\site-packages\torch\nn\functional.py", line 2450, in batch_norm
+    return torch.batch_norm(
+KeyboardInterrupt
+^C
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>python pytorch\1.13\resnet50\test.py --trace True
+Loading the testing dataset from: F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python
+        Test data X [N, C, H, W]:
+                shape=torch.Size([1, 3, 224, 224]),
+                dtype=torch.float32
+        Test data Y:
+                shape=torch.Size([1]),
+                dtype=torch.int64
+Finished moving resnet50 to device: privateuseone:0 in 0.4195704460144043s.
+STAGE:2024-03-15 11:40:05 20688:22924 ..\third_party\kineto\libkineto\src\ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2024-03-15 11:40:05 20688:22924 ..\third_party\kineto\libkineto\src\ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2024-03-15 11:40:05 20688:22924 ..\third_party\kineto\libkineto\src\ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+----------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+                              Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg       CPU Mem  Self CPU Mem    # of Calls
+----------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+                   model_inference         2.63%       5.434ms       100.00%     206.313ms     206.313ms           0 b           0 b             1
+                      aten::conv2d         0.24%     505.000us        92.42%     190.680ms       3.598ms           0 b           0 b            53
+                 aten::convolution         0.12%     246.000us        92.33%     190.491ms       3.594ms           0 b           0 b            53
+                aten::_convolution         0.18%     363.000us        92.21%     190.245ms       3.590ms           0 b           0 b            53
+    aten::convolution_overrideable        92.04%     189.882ms        92.04%     189.882ms       3.583ms           0 b           0 b            53
+                  aten::batch_norm         0.07%     153.000us         2.32%       4.784ms      90.264us           0 b           0 b            53
+      aten::_batch_norm_impl_index         0.17%     357.000us         2.24%       4.631ms      87.377us           0 b           0 b            53
+           aten::native_batch_norm         1.68%       3.457ms         1.99%       4.103ms      77.415us           0 b           0 b            53
+                       aten::relu_         1.20%       2.473ms         1.20%       2.473ms      50.469us           0 b           0 b            49
+                       aten::addmm         0.30%     625.000us         0.61%       1.252ms     626.000us           0 b           0 b             2
+                        aten::mean         0.30%     616.000us         0.59%       1.216ms     608.000us           0 b           0 b             2
+                        aten::add_         0.08%     155.000us         0.42%     861.000us      53.812us           0 b           0 b            16
+                         aten::add         0.34%     706.000us         0.34%     706.000us      44.125us           0 b           0 b            16
+                      aten::linear         0.01%      20.000us         0.33%     684.000us     684.000us           0 b           0 b             1
+         aten::adaptive_avg_pool2d         0.01%      21.000us         0.31%     645.000us     645.000us           0 b           0 b             1
+                     aten::reshape         0.18%     381.000us         0.31%     637.000us       2.991us           0 b           0 b           213
+                  aten::max_pool2d         0.01%      17.000us         0.19%     401.000us     401.000us           0 b           0 b             1
+     aten::max_pool2d_with_indices         0.19%     384.000us         0.19%     384.000us     384.000us           0 b           0 b             1
+              aten::_reshape_alias         0.14%     285.000us         0.14%     285.000us       1.332us           0 b           0 b           214
+                       aten::empty         0.09%     181.000us         0.09%     181.000us       3.291us           0 b           0 b            55
+                     aten::flatten         0.01%      18.000us         0.02%      35.000us      35.000us           0 b           0 b             1
+                           aten::t         0.01%      14.000us         0.01%      22.000us      22.000us           0 b           0 b             1
+                aten::broadcast_to         0.00%       8.000us         0.01%      12.000us      12.000us           0 b           0 b             1
+                   aten::transpose         0.00%       6.000us         0.00%       8.000us       8.000us           0 b           0 b             1
+                      aten::expand         0.00%       3.000us         0.00%       4.000us       4.000us           0 b           0 b             1
+                  aten::as_strided         0.00%       3.000us         0.00%       3.000us       1.500us           0 b           0 b             2
+----------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+Self CPU time total: 206.313ms
+
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>python pytorch\1.13\resnet50\train.py --trace True
+Loading the training dataset from: F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python
+        Train data X [N, C, H, W]:
+                shape=torch.Size([1, 3, 224, 224]),
+                dtype=torch.float32
+        Train data Y:
+                shape=torch.Size([1]),
+                dtype=torch.int64
+Loading the testing dataset from: F:\用户目录\我的文档\GitHub\DirectML\PyTorch\1.13\data\cifar-10-python
+        Test data X [N, C, H, W]:
+                shape=torch.Size([1, 3, 224, 224]),
+                dtype=torch.float32
+        Test data Y:
+                shape=torch.Size([1]),
+                dtype=torch.int64
+Finished moving resnet50 to device: privateuseone:0 in 0.0s.
+Epoch 1
+-------------------------------
+STAGE:2024-03-15 11:40:57 11996:21804 ..\third_party\kineto\libkineto\src\ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2024-03-15 11:40:57 11996:21804 ..\third_party\kineto\libkineto\src\ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2024-03-15 11:40:57 11996:21804 ..\third_party\kineto\libkineto\src\ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg       CPU Mem  Self CPU Mem    # of Calls
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+                                        model_inference        41.25%     346.814ms        61.59%     517.795ms     517.795ms           0 b           0 b             1
+autograd::engine::evaluate_function: ConvolutionBack...         0.05%     440.000us        28.45%     239.147ms       4.512ms           0 b           0 b            53
+                                   ConvolutionBackward0         0.03%     278.000us        28.33%     238.165ms       4.494ms           0 b           0 b            53
+                             aten::convolution_backward         0.06%     482.000us        28.30%     237.887ms       4.488ms           0 b           0 b            53
+                aten::convolution_backward_overrideable        27.90%     234.552ms        28.24%     237.405ms       4.479ms           0 b           0 b            53
+                               aten::threshold_backward         4.84%      40.688ms         9.67%      81.321ms     829.806us           0 b           0 b            98
+                                       aten::batch_norm        -0.04%    -360.000us         9.55%      80.309ms       1.515ms           0 b           0 b            53
+                           aten::_batch_norm_impl_index         0.11%     892.000us         9.53%      80.132ms       1.512ms           0 b           0 b            53
+                                     aten::_log_softmax         4.76%      40.059ms         9.53%      80.082ms      40.041ms           0 b           0 b             2
+                                aten::native_batch_norm         4.56%      38.354ms         9.47%      79.654ms       1.503ms           0 b        -232 b            53
+                               aten::cross_entropy_loss         0.01%      43.000us         5.00%      42.012ms      42.012ms           0 b           0 b             1
+     autograd::engine::evaluate_function: ReluBackward0         0.01%     100.000us         4.92%      41.403ms     844.959us           0 b           0 b            49
+                                          ReluBackward0         0.03%     247.000us         4.91%      41.264ms     842.122us           0 b           0 b            49
+                                      aten::log_softmax         0.00%      33.000us         4.77%      40.113ms      40.113ms           0 b           0 b             1
+                                              aten::sub         1.04%       8.727ms         4.43%      37.237ms     117.097us           0 b           0 b           318
+autograd::engine::evaluate_function: NativeBatchNorm...         0.02%     189.000us         4.09%      34.367ms     648.434us           0 b           0 b            53
+                               NativeBatchNormBackward0         0.07%     556.000us         4.04%      33.966ms     640.868us           0 b           0 b            53
+                       aten::native_batch_norm_backward         3.90%      32.823ms         4.00%      33.622ms     634.377us           0 b           0 b            53
+                                              aten::add         2.61%      21.914ms         3.82%      32.131ms      40.366us           0 b           0 b           796
+                                Optimizer.step#SGD.step         0.65%       5.470ms         3.20%      26.901ms      26.901ms           0 b           0 b             1
+                                            aten::empty         2.86%      24.025ms         2.86%      24.025ms      33.648us           0 b           0 b           714
+                                           aten::conv2d         0.03%     268.000us         1.59%      13.331ms     251.528us           0 b           0 b            53
+                                      aten::convolution         0.07%     616.000us         1.56%      13.127ms     247.679us           0 b           0 b            53
+                                             aten::add_         0.16%       1.366ms         1.54%      12.915ms      56.152us           0 b           0 b           230
+                                     aten::_convolution         0.04%     367.000us         1.49%      12.511ms     236.057us           0 b           0 b            53
+                         aten::convolution_overrideable         1.44%      12.144ms         1.44%      12.144ms     229.132us           0 b           0 b            53
+                                               aten::mm         0.42%       3.497ms         0.83%       6.989ms       1.747ms           0 b           0 b             4
+                                              aten::mul         0.34%       2.832ms         0.62%       5.210ms      24.233us         208 b         232 b           215
+                                            aten::clone         0.07%     602.000us         0.60%       5.017ms      31.161us           0 b           0 b           161
+    autograd::engine::evaluate_function: AddmmBackward0         0.00%      29.000us         0.51%       4.310ms       4.310ms           0 b           0 b             1
+                                 aten::nll_loss_forward         0.21%       1.804ms         0.43%       3.621ms       1.810ms           0 b           0 b             2
+                                         AddmmBackward0         0.00%      27.000us         0.42%       3.573ms       3.573ms           0 b           0 b             1
+                                              aten::sum         0.30%       2.521ms         0.40%       3.404ms      61.891us           0 b           0 b            55
+                                             aten::pow_         0.05%     407.000us         0.37%       3.131ms      59.075us           0 b           0 b            53
+                                            aten::copy_         0.36%       3.037ms         0.36%       3.037ms      18.863us           0 b           0 b           161
+                                              aten::pow         0.18%       1.495ms         0.32%       2.720ms      51.321us           0 b           0 b            53
+                                      aten::nll_loss_nd         0.00%       9.000us         0.22%       1.856ms       1.856ms           0 b           0 b             1
+                                         aten::nll_loss         0.00%      13.000us         0.22%       1.847ms       1.847ms           0 b           0 b             1
+                       aten::_log_softmax_backward_data         0.11%     905.000us         0.21%       1.795ms     897.500us           0 b           0 b             2
+                                            aten::relu_         0.21%       1.744ms         0.21%       1.744ms      35.592us           0 b           0 b            49
+                                       aten::empty_like         0.05%     410.000us         0.17%       1.431ms       8.833us           0 b           0 b           162
+                                          aten::reshape         0.09%     775.000us         0.15%       1.254ms       2.923us           0 b           0 b           429
+                                aten::nll_loss_backward         0.07%     613.000us         0.15%       1.227ms     613.500us           0 b           0 b             2
+                                    aten::scalar_tensor         0.02%     191.000us         0.15%       1.225ms      23.113us           0 b           0 b            53
+                                             aten::abs_         0.02%     164.000us         0.14%       1.214ms      22.906us           0 b           0 b            53
+                                              aten::abs         0.13%       1.131ms         0.13%       1.131ms      21.340us           0 b           0 b            53
+                                    aten::empty_strided         0.13%       1.068ms         0.13%       1.068ms       6.593us           0 b           0 b           162
+autograd::engine::evaluate_function: LogSoftmaxBackw...         0.00%       7.000us         0.11%     934.000us     934.000us           0 b           0 b             1
+                                    LogSoftmaxBackward0         0.00%      15.000us         0.11%     927.000us     927.000us           0 b           0 b             1
+autograd::engine::evaluate_function: torch::autograd...         0.03%     265.000us         0.10%     882.000us       5.478us           0 b           0 b           161
+                                            aten::fill_         0.10%     815.000us         0.10%     815.000us      15.093us           0 b           0 b            54
+                                          aten::squeeze         0.06%     481.000us         0.09%     733.000us       3.425us           0 b           0 b           214
+                                           aten::detach         0.04%     342.000us         0.08%     714.000us       2.217us           0 b           0 b           322
+autograd::engine::evaluate_function: NllLossBackward...         0.00%      31.000us         0.08%     704.000us     704.000us           0 b           0 b             1
+                                       NllLossBackward0         0.00%      31.000us         0.08%     673.000us     673.000us           0 b           0 b             1
+                                              aten::div         0.04%     375.000us         0.08%     636.000us     318.000us           0 b           0 b             2
+                        torch::autograd::AccumulateGrad         0.03%     289.000us         0.08%     634.000us       3.938us           0 b           0 b           161
+autograd::engine::evaluate_function: MaxPool2DWithIn...         0.00%       7.000us         0.07%     617.000us     617.000us           0 b           0 b             1
+                                            aten::addmm         0.04%     307.000us         0.07%     611.000us     305.500us           0 b           0 b             2
+                          MaxPool2DWithIndicesBackward0         0.00%      35.000us         0.07%     610.000us     610.000us           0 b           0 b             1
+                 aten::max_pool2d_with_indices_backward         0.07%     575.000us         0.07%     575.000us     575.000us           0 b           0 b             1
+                                       aten::as_strided         0.07%     548.000us         0.07%     548.000us       1.128us           0 b           0 b           486
+                                   aten::_reshape_alias         0.06%     541.000us         0.06%     541.000us       1.258us           0 b           0 b           430
+                                        aten::transpose         0.03%     288.000us         0.06%     506.000us       2.332us           0 b           0 b           217
+                                                 detach         0.05%     457.000us         0.05%     457.000us       1.419us           0 b           0 b           322
+     autograd::engine::evaluate_function: MeanBackward1         0.00%       8.000us         0.05%     414.000us     414.000us           0 b           0 b             1
+                                          MeanBackward1         0.00%       8.000us         0.05%     406.000us     406.000us           0 b           0 b             1
+                                       aten::max_pool2d         0.00%      12.000us         0.04%     364.000us     364.000us           0 b           0 b             1
+                                           aten::linear         0.00%      12.000us         0.04%     358.000us     358.000us           0 b           0 b             1
+                          aten::max_pool2d_with_indices         0.04%     352.000us         0.04%     352.000us     352.000us           0 b           0 b             1
+                      Optimizer.zero_grad#SGD.zero_grad         0.02%     204.000us         0.02%     204.000us     204.000us           0 b           0 b             1
+                                             aten::mean         0.01%      95.000us         0.02%     178.000us      89.000us           0 b           0 b             2
+                              aten::adaptive_avg_pool2d         0.00%      11.000us         0.01%     118.000us     118.000us           0 b           0 b             1
+                                      aten::as_strided_         0.01%      79.000us         0.01%      79.000us       0.745us           0 b           0 b           106
+                                                aten::t         0.00%      37.000us         0.01%      65.000us      13.000us           0 b           0 b             5
+      autograd::engine::evaluate_function: AddBackward0         0.01%      49.000us         0.01%      59.000us       3.688us           0 b           0 b            16
+                                        aten::ones_like         0.00%       4.000us         0.01%      44.000us      44.000us           0 b           0 b             1
+                                          aten::flatten         0.00%      13.000us         0.00%      31.000us      31.000us           0 b           0 b             1
+                                           aten::expand         0.00%      14.000us         0.00%      16.000us       8.000us           0 b           0 b             2
+                                             aten::view         0.00%      13.000us         0.00%      13.000us      13.000us           0 b           0 b             1
+autograd::engine::evaluate_function: ReshapeAliasBac...         0.00%       2.000us         0.00%      13.000us      13.000us           0 b           0 b             1
+        autograd::engine::evaluate_function: TBackward0         0.00%       2.000us         0.00%      12.000us      12.000us           0 b           0 b             1
+                                  ReshapeAliasBackward0         0.00%       2.000us         0.00%      11.000us      11.000us           0 b           0 b             1
+                                             TBackward0         0.00%       3.000us         0.00%      10.000us      10.000us           0 b           0 b             1
+                                           AddBackward0         0.00%      10.000us         0.00%      10.000us       0.625us           0 b           0 b            16
+                                     aten::broadcast_to         0.00%       5.000us         0.00%       9.000us       9.000us           0 b           0 b             1
+                                      aten::result_type         0.00%       3.000us         0.00%       3.000us       0.028us           0 b           0 b           106
+                                               aten::to         0.00%       3.000us         0.00%       3.000us       0.056us           0 b           0 b            54
+                                         aten::can_cast         0.00%       0.000us         0.00%       0.000us       0.000us           0 b           0 b            53
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+Self CPU time total: 840.711ms
+
+Done! with highest_accuracy:  0
+
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>
+(TF2) F:\用户目录\我的文档\GitHub\DirectML>cd ..
